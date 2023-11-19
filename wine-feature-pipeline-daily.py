@@ -22,7 +22,9 @@ def get_random_iris_flower():
         mean,std = result.iloc[:,0][feature]
         value = np.random.normal(mean,std,1)
         made_up_data[feature] = value
-    return pd.DataFrame(made_up_data)
+    df = pd.DataFrame(made_up_data)
+    df['quality'] = random_quality
+    return df
 
 
 def g():
