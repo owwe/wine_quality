@@ -29,6 +29,7 @@ def get_random_wine():
     return df
 
 
+
 def g():
     import hopsworks
     import pandas as pd
