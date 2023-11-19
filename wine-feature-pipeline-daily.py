@@ -1,7 +1,7 @@
 import os
 
 
-def get_random_iris_flower():
+def get_random_wine():
     """
     Returns a DataFrame containing one random iris flower
     """
@@ -21,6 +21,8 @@ def get_random_iris_flower():
     for feature in distinct_features:
         mean,std = result.iloc[:,0][feature]
         value = np.random.normal(mean,std,1)
+        if value < 0:
+            value = np.abs(value)
         made_up_data[feature] = value
     df = pd.DataFrame(made_up_data)
     df['quality'] = random_quality
@@ -34,7 +36,7 @@ def g():
     project = hopsworks.login()
     fs = project.get_feature_store()
 
-    wine_df = get_random_iris_flower()
+    wine_df = get_random_wine()
     print('get feature group ')
     wine_fg = fs.get_feature_group(name="wine_quality",version=1)
     print(f'get feature group {wine_fg}')
