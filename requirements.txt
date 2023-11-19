@@ -7,3 +7,4 @@ seaborn
 dataframe-image
 pandas
 gradio==3.14
+numpy
