@@ -24,11 +24,6 @@ def winequality(fixed_acidity, volatile_acidity, citric_acid, residual_sugar,
                       columns=['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar',
        'chlorides', 'free sulfur dioxide', 'total sulfur dioxide', 'density',
        'sulphates', 'alcohol'])
-
-    features = np.array([fixed_acidity, volatile_acidity, citric_acid, residual_sugar,
-                         chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density,
-                         sulphates, alcohol]).reshape(1, -1)
-
     print("Predicting")
     print(df)
     # 'res' is a list of predictions returned as the label.
