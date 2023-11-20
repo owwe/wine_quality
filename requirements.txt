@@ -1,0 +1,14 @@
+#If you have windows, install twofish
+#twofish
+hopsworks
+joblib
+scikit-learn==1.1.1
+seaborn
+dataframe-image
+pandas
+gradio==3.14
+numpy
+python-dotenv
+xgboost
+pillow
+matplotlib
