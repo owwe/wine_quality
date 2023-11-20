@@ -13,7 +13,7 @@ def get_random_wine():
     df.drop(['type','pH'],inplace= True,axis = 1)
     df.columns = df.columns.str.replace(' ',"_")
     result = df.groupby('quality').agg(['mean', 'std']).T
-    random_quality = np.random.randint(3,10)
+    random_quality = 3#np.random.randint(3,10)
     distinct_features  = set()
     for i in result.index:
         distinct_features.add(i[0])
