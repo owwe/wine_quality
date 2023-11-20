@@ -83,7 +83,7 @@ history_df = monitor_fg.read()
 # the insertion was done asynchronously, so it will take ~1 min to land on App
 history_df = pd.concat([history_df, monitor_df])
 
-df_recent = history_df.tail(4)
+df_recent = history_df.tail(6)
 fig, ax = plt.subplots(figsize=(8, 4))
 ax.axis('tight')
 ax.axis('off')
@@ -110,8 +110,8 @@ if predictions.value_counts().count() == 7:
 
     cm = sns.heatmap(df_cm, annot=True)
     fig = cm.get_figure()
-    fig.savefig("./confusion_matrix.png")
-    dataset_api.upload("./confusion_matrix.png", "Resources/images", overwrite=True)
+    fig.savefig("./wine_confusion_matrix.png")
+    dataset_api.upload("./wine_confusion_matrix.png", "Resources/images", overwrite=True)
 else:
     print("You need 7 different wine quality predictions to create the confusion matrix.")
     print("Run the batch inference pipeline more times until you get 7 different wine quality predictions") 
