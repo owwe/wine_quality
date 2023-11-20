@@ -33,7 +33,9 @@ is predicted. It saves the latest results to a .txt file and
 upload it to hopsworks.
 
 ### 5- wine
-Gradio app for getting the inputs
+Gradio app for getting the inputs. It uses the saved model 
+on hopswoks and predict the result for given features.
+
 
 ### 6- wine-monitor
 Gradio app for displaying the latest prediction versus the 
