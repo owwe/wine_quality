@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: '11 11 * * *'
+    - cron: '40,45,50,55 21 * * *'
 
 jobs:
   test_schedule:
@@ -29,6 +29,7 @@ jobs:
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
         run: |
           python wine-feature-pipeline-daily.py
+          python wine-batch-inference-pipeline.py
         
 
 
