@@ -38,7 +38,7 @@ Gradio app for getting the inputs. It uses the saved model
 on hopswoks and predict the result for given features.
 
 
-### 6- [Wine Monitor](https://huggingface.co/spaces/nelanbu/winequality_monitor)
+### 6- [Wine Monitor](https://huggingface.co/spaces/Kiwipirate/wine-monitor)
 
 Gradio app for displaying the latest prediction versus the 
 real label. It also displays recent predictions in a table.
