@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
-  schedule:
-    - cron: '00 22 * * *'
+
 
 jobs:
   test_schedule:
